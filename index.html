@@ -7,7 +7,33 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <h1>hello</h1>
+    <div class="scoreboard">
+        <div class="team">
+            <h2>Home</h2>
+            <div class="score" id="home-score">0</div>
+            <div class="controls">
+                <button class="btn" id="home-add1" onclick="addOnepoint()">+1</button>
+                <button class="btn" id="home-add2" onclick="addTwopoint()">+2</button>
+                <button class="btn" id="home-add3" onclick="addThreepoint()">+3</button>
+            </div>
+        </div>
+
+        <div class="team">
+            <h2>Guest</h2>
+            <div class="score" id="guest-score">0</div>
+            <div class="controls">
+                <button class="btn" id="guest-add1" onclick="addOnepointGuest()">+1</button>
+                <button class="btn" id="guest-add2" onclick="addTwopointGuest()">+2</button>
+                <button class="btn" id="guest-add3" onclick="addThreepointGuest()">+3</button>
+            </div>
+            <h2 class="Winner-status" id="statusWinner"></h2>
+        </div>
+        <div class="match-controls">
+            <button class="btn match-btn" id="start-game" onclick="scoreReset()">Start New Game</button>
+            <button class="btn match-btn" id="end-match" onclick="declareWinner()">End Match</button>
+        </div>
+    </div>
+   
     <script src="script.js"></script>
 </body>
 </html>
